@@ -205,6 +205,25 @@ footer .langs { margin-left: -7px; }
 /* Griechisch: Bricolage Grotesque hat keine griechischen Zeichen, daher eine Systemschrift mit Griechisch-Unterstützung */
 html[lang="el"] { --display: "Avenir Next", "Helvetica Neue", system-ui, sans-serif; }
 html[lang="el"] h1, html[lang="el"] h2, html[lang="el"] .plan .price { font-weight: 700; }
+
+/* Vergleich */
+.compare { padding-block: 88px 24px; display: grid; gap: 28px; }
+.compare-head { display: grid; gap: 14px; max-width: 52ch; }
+.compare-head p { color: var(--muted); }
+.compare-scroll { overflow-x: auto; border: 1.5px solid var(--line); border-radius: 20px; background: var(--surface); }
+.compare table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 860px; font-size: .94rem; }
+.compare th, .compare td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.compare tbody tr:last-child th, .compare tbody tr:last-child td { border-bottom: 0; }
+.compare thead th { font-family: var(--display); font-weight: 600; font-size: .98rem; line-height: 1.25; background: var(--surface); }
+.compare tbody th { font-weight: 600; width: 20%; background: var(--surface); position: sticky; left: 0; z-index: 1; }
+.compare .me { background: var(--band); }
+.compare thead .me { color: var(--brand-ink); }
+.compare td .ic { display: inline-block; width: 1.2em; font-weight: 700; }
+.compare td.k-yes .ic { color: var(--brand-ink); }
+.compare td.k-no .ic { color: var(--coral); }
+.compare td.k-mid .ic { color: var(--muted); }
+.compare-note { color: var(--muted); font-size: .88rem; max-width: 72ch; }
+html[lang="el"] .compare thead th { font-weight: 700; }
 </style>
 <meta name="apple-itunes-app" content="app-id=6774941169">
 </head>
@@ -281,6 +300,30 @@ html[lang="el"] h1, html[lang="el"] h2, html[lang="el"] .plan .price { font-weig
       </div>
     </div>
   </div>
+
+  <section class="wrap compare" id="vergleich">
+    <div class="compare-head">
+      <p class="eyebrow">Comparison</p>
+      <h2>How MoniCal differs from other approaches.</h2>
+      <p>An honest look at what MoniCal is for, and what it is not.</p>
+    </div>
+    <div class="compare-scroll" tabindex="0" role="region" aria-label="Comparison">
+      <table>
+        <thead><tr><th scope="col"></th><th scope="col" class="me">MoniCal</th><th scope="col">Budget app with bank connection</th><th scope="col">Spreadsheet (Excel, Numbers, Sheets)</th><th scope="col">Your bank&#x27;s app</th></tr></thead>
+        <tbody>
+<tr><th scope="row">Day-by-day calendar view</th><td class="k-yes me"><span class="ic" aria-hidden="true">✓</span>Yes</td><td class="k-no"><span class="ic" aria-hidden="true">✕</span>Usually not, more lists and charts</td><td class="k-mid"><span class="ic" aria-hidden="true">–</span>Only if you build it</td><td class="k-no"><span class="ic" aria-hidden="true">✕</span>Usually not, a transaction list</td></tr>
+<tr><th scope="row">Budget per category</th><td class="k-yes me"><span class="ic" aria-hidden="true">✓</span>Yes</td><td class="k-yes"><span class="ic" aria-hidden="true">✓</span>Usually yes</td><td class="k-mid"><span class="ic" aria-hidden="true">–</span>You build it</td><td class="k-mid"><span class="ic" aria-hidden="true">–</span>Depends on the bank</td></tr>
+<tr><th scope="row">Reminder before a payment</th><td class="k-yes me"><span class="ic" aria-hidden="true">✓</span>Yes</td><td class="k-mid"><span class="ic" aria-hidden="true">–</span>Depends on the app</td><td class="k-no"><span class="ic" aria-hidden="true">✕</span>Only if you build it</td><td class="k-mid"><span class="ic" aria-hidden="true">–</span>Depends on the bank</td></tr>
+<tr><th scope="row">No account, no bank access</th><td class="k-yes me"><span class="ic" aria-hidden="true">✓</span>Yes</td><td class="k-no"><span class="ic" aria-hidden="true">✕</span>Usually no, bank access needed</td><td class="k-yes"><span class="ic" aria-hidden="true">✓</span>Yes</td><td class="k-no"><span class="ic" aria-hidden="true">✕</span>No, bank customers only</td></tr>
+<tr><th scope="row">Data only on device and iCloud</th><td class="k-yes me"><span class="ic" aria-hidden="true">✓</span>Yes*</td><td class="k-no"><span class="ic" aria-hidden="true">✕</span>Usually on the provider&#x27;s servers</td><td class="k-mid"><span class="ic" aria-hidden="true">–</span>In your file or cloud</td><td class="k-no"><span class="ic" aria-hidden="true">✕</span>At the bank</td></tr>
+<tr><th scope="row">Automatic transaction import</th><td class="k-no me"><span class="ic" aria-hidden="true">✕</span>No, you enter entries yourself</td><td class="k-yes"><span class="ic" aria-hidden="true">✓</span>Yes</td><td class="k-no"><span class="ic" aria-hidden="true">✕</span>No</td><td class="k-yes"><span class="ic" aria-hidden="true">✓</span>Yes</td></tr>
+<tr><th scope="row">Platforms</th><td class="k-mid me"><span class="ic" aria-hidden="true">–</span>iPhone and iPad, no Android or web version</td><td class="k-mid"><span class="ic" aria-hidden="true">–</span>Depends on the app</td><td class="k-yes"><span class="ic" aria-hidden="true">✓</span>Mac, PC and phone</td><td class="k-mid"><span class="ic" aria-hidden="true">–</span>Depends on the bank</td></tr>
+<tr><th scope="row">Free to use</th><td class="k-yes me"><span class="ic" aria-hidden="true">✓</span>Yes, Pro is optional</td><td class="k-mid"><span class="ic" aria-hidden="true">–</span>Depends on the app</td><td class="k-mid"><span class="ic" aria-hidden="true">–</span>Depends on the program</td><td class="k-yes"><span class="ic" aria-hidden="true">✓</span>Usually yes, for customers</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-note">General overview of typical offerings, as of October 2026. Individual apps and programs differ. No guarantee. * The optional community feature is excluded.</p>
+  </section>
 
   <section class="wrap pricing" id="preise">
     <div class="pricing-head">

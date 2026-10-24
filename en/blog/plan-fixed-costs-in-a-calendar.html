@@ -205,6 +205,25 @@ footer .langs { margin-left: -7px; }
 /* Griechisch: Bricolage Grotesque hat keine griechischen Zeichen, daher eine Systemschrift mit Griechisch-Unterstützung */
 html[lang="el"] { --display: "Avenir Next", "Helvetica Neue", system-ui, sans-serif; }
 html[lang="el"] h1, html[lang="el"] h2, html[lang="el"] .plan .price { font-weight: 700; }
+
+/* Vergleich */
+.compare { padding-block: 88px 24px; display: grid; gap: 28px; }
+.compare-head { display: grid; gap: 14px; max-width: 52ch; }
+.compare-head p { color: var(--muted); }
+.compare-scroll { overflow-x: auto; border: 1.5px solid var(--line); border-radius: 20px; background: var(--surface); }
+.compare table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 860px; font-size: .94rem; }
+.compare th, .compare td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.compare tbody tr:last-child th, .compare tbody tr:last-child td { border-bottom: 0; }
+.compare thead th { font-family: var(--display); font-weight: 600; font-size: .98rem; line-height: 1.25; background: var(--surface); }
+.compare tbody th { font-weight: 600; width: 20%; background: var(--surface); position: sticky; left: 0; z-index: 1; }
+.compare .me { background: var(--band); }
+.compare thead .me { color: var(--brand-ink); }
+.compare td .ic { display: inline-block; width: 1.2em; font-weight: 700; }
+.compare td.k-yes .ic { color: var(--brand-ink); }
+.compare td.k-no .ic { color: var(--coral); }
+.compare td.k-mid .ic { color: var(--muted); }
+.compare-note { color: var(--muted); font-size: .88rem; max-width: 72ch; }
+html[lang="el"] .compare thead th { font-weight: 700; }
 </style>
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Plan your fixed costs in a calendar: never lose track of a payment again", "description": "Plan fixed costs, subscriptions and bills in a calendar in five steps, set reminders and define a monthly budget. With practical tips.", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "inLanguage": "en", "author": {"@type": "Organization", "name": "Horizon Labs"}, "publisher": {"@type": "Organization", "name": "Horizon Labs"}, "mainEntityOfPage": "https://horizonlabsdev.github.io/monical-site/en/blog/plan-fixed-costs-in-a-calendar.html"}, {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "How do I find all my subscriptions?", "acceptedAnswer": {"@type": "Answer", "text": "Go through your bank statements from the last three to six months and mark everything that repeats. Also check your credit card, PayPal and the subscriptions in your Apple ID settings."}}, {"@type": "Question", "name": "How many days before a payment should I be reminded?", "acceptedAnswer": {"@type": "Answer", "text": "For monthly payments, one to three days is often enough so your account is covered. For yearly fees and insurance, a week or more lets you still cancel or compare."}}, {"@type": "Question", "name": "What is the difference between fixed costs and variable spending?", "acceptedAnswer": {"@type": "Answer", "text": "Fixed costs are the same amount on fixed dates, such as rent, insurance or streaming. Variable spending fluctuates, such as groceries, restaurants or clothing. For fixed costs you plan dates, for variable spending a monthly budget."}}]}]</script>
 </head>
